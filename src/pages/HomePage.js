@@ -1,4 +1,4 @@
-import MapRender from "../components/maps/MapBox";
+import MapRender from "../components/maps/Map";
 
 function HomePage() {
   return (
