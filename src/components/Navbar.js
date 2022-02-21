@@ -10,9 +10,21 @@ function Navbar() {
   return (
     <nav>
       <Link to="/">
-        <button>Home</button>
+        <a href="/">Home</a>
       </Link>
--
+
+      <Link to="/cites"> 
+      <a href="/">Cities</a> 
+      </Link>
+
+      <Link to="/all-spots"> 
+      <a href="/">All Spots</a> 
+      </Link>
+
+      <Link to="/new-spot"> 
+      <a href="/">New Spot</a> 
+      </Link>
+
       {isLoggedIn
         ? (<>
             <Link to="/projects">
@@ -23,8 +35,9 @@ function Navbar() {
           </>)
         : 
         (<>
-          <Link to="/signup"> <button>Signup</button> </Link>
-          <Link to="/login"> <button>Login</button> </Link>
+          <Link to="/signup"> <a href="/">Signup</a> </Link>
+          <Link to="/login"> <a href="/">Login</a> </Link>
+
         </>)
       }
     </nav>

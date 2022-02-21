@@ -10,6 +10,8 @@ import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
 import PrivateRoute from "./components/PrivateRoute";    // <== IMPORT
 import AnonRoute from "./components/AnonRoute";        // <== IMPORT
+import AllSpots from "./pages/AllSpots";
+import NewSpot from "./pages/NewSpot";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
 
       <Switch>      
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/all-spots" component={AllSpots} />
+        <Route exact path="/new-spot" component={NewSpot} />
 
         {/* 👇 UPDATE THE EXISTING ROUTES 👇  */}
         <PrivateRoute exact path="/projects" component={ProjectListPage} />
