@@ -4,7 +4,7 @@ function HomePage() {
   return (
     <div>
       <h1>Global Spot Check</h1>
-      <MapRender />
+      <MapRender marker = {[{'lat' : 4.25, 'lng': 3.4}]}/>
     </div>
   );
 }
