@@ -1,11 +1,8 @@
 import SpotList from "../components/spots/SpotList";
-import getSpots from "../DUMMY_DATA";
 import { useState, useEffect } from 'react';
 
-const DUMMY_DATA = getSpots();
 
-
-function AllSpots() {
+function AllSpots(props) {
 
   const [isLoading, setIsLoading] = useState(true);
   const [loadedSpots, setLoadedSpots] = useState([]);
@@ -31,8 +28,7 @@ function AllSpots() {
       setLoadedSpots(spotsData);
     });
   }, []
-);
-
+  );
 
 
   if (isLoading) {
@@ -42,10 +38,12 @@ function AllSpots() {
   }
 
 
-  return <section>
-    <h1>Global Spot Check</h1>
-      <SpotList spots={loadedSpots}/>
-  </section>
+    return <section>
+      <h1>Global Spot Check</h1>     
+        <SpotList spotItem ={props.spotItem} spots={loadedSpots}/>
+    </section>
+  
+
 }
 
 export default AllSpots;
